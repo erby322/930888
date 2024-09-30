@@ -167,4 +167,48 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+  const img = document.getElementById('draggable');
+const target = document.getElementById('target');
+
+img.onmousedown = function(event) {
+    let shiftX = event.clientX - img.getBoundingClientRect().left;
+    let shiftY = event.clientY - img.getBoundingClientRect().top;
+
+    function moveAt(pageX, pageY) {
+        img.style.left = pageX - shiftX + 'px';
+        img.style.top = pageY - shiftY + 'px';
+    }
+
+    function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    img.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        img.onmouseup = null; // 移除事件
+        
+        // 检查是否放置在目标图片上
+        if (isOverlapping(img, target)) {
+            window.open('http://pump.fun', '_blank'); // 在新标签页中打开链接
+        }
+    };
+};
+
+img.ondragstart = function() {
+    return false; // 禁用默认拖动行为
+};
+
+// 检查两个元素是否重叠
+function isOverlapping(rect1, rect2) {
+    const r1 = rect1.getBoundingClientRect();
+    const r2 = rect2.getBoundingClientRect();
+    return !(
+        r1.right < r2.left ||
+        r1.left > r2.right ||
+        r1.bottom < r2.top ||
+        r1.top > r2.bottom
+    );
+}
 }

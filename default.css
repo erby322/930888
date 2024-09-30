@@ -80,6 +80,15 @@ div {
   top: var(--pronouns-y, 200px);
   left: var(--pronouns-x, 250px);
 }
+
+#draggable {
+    width: 250px; /* 根据需要调整大小 */
+    cursor: move; /* 鼠标悬停时显示移动光标 */
+    position: absolute; /* 使其可以自由移动 */
+	bottom: 600px;
+    right: 570px;
+	z-index: 1;
+}
 .top {
   width: 100%;
   height: 25px;
@@ -251,6 +260,13 @@ th {
   z-index: 1;
 }
 
+#video {
+  position: absolute;
+  bottom: 530px;
+  right: 138px;
+  width: 400px;
+  z-index: 1;
+}
 #clipPy {
   position: absolute;
   left: 10px;
@@ -288,4 +304,22 @@ th {
 .warn {
   width: 16px;
   height: 16px;
+}
+.blinking-text {
+    position: absolute; /* 可以调整位置 */
+    left: 1070px; /* 根据需要调整位置 */
+    top: 265px; /* 根据需要调整位置 */
+    font-size: 24px; /* 根据需要调整字体大小 */
+    color: white; /* 设置文字颜色为白色 */
+    animation: blink-animation 0.5s steps(5, start) infinite; /* 设置闪烁频率 */
+    white-space: nowrap; /* 确保文字在一行内显示 */
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden; /* 使文字不可见 */
+    }
+}
+.red-text {
+    color: red; /* 设置字体颜色为红色 */
 }

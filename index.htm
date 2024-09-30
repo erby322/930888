@@ -1,0 +1,289 @@
+﻿<!--
+TODO:
+  - folder collection of all my picrews with links to the one used for each image
+  - music player (winamp? https://skins.webamp.org/skin/6e312a8b1e8c41b764e19afce59440ab/TetAtck.wsz/)
+  - command line with that text game I was working on years ago
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>The first windows dog - $Rover</title>
+    <link rel="icon" type="image/png" href="Roverlogo.png">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <script type="text/javascript" src="default.js"></script>
+    <script type="text/javascript" src="ajax_bs.js"></script>
+  </head>
+  <body>
+    
+    <img src="urhc2.png" id="urhc">
+    <img src="firstpost2.png" id="nwlogo">
+    
+    <div id="dskcnt">
+      <div class="dsktp" onclick="vis('main')">
+        <img src="ico/fcom.png" class="ico"><br>
+        <span class="menu">Main</span>
+      </div>
+      <div class="dsktp" onclick="vis('about')">
+        <img src="ico/text.png" class="ico"><br>
+        <span class="menu">About</span>
+      </div>
+
+      <div class="dsktp" onclick="vis('butn')">
+        <img src="ico/webw.png" class="ico"><br>
+        <span class="menu">Links</span>
+      </div>
+
+    </div>
+    
+    <div id="clipBox">
+      <img id="clipBubble" src="clip%20bubble.png">
+      <img id="clipPy" src="Rover.png">
+      <div id="clipText">Have you tried clicking on those icons up there? They open new windows!<br>
+        <span onclick="vis('clipBox')"><img class="clipButts" src="clipbutton.png"></span> yes, I have<br>
+        <span id="clipVisBox" onclick="setVis('clipBox')"><img class="clipButts" src="clipuncheck.png"></span> please stay away
+      </div>
+      
+    </div>
+    
+    <div class="box closed" id="main">
+      <div class="top" id="mainh">
+        <div class="toptxt">Main - File Explorer</div>
+        <div class="ex" onclick="vis('main')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+        <table class="folder">
+          <tr>
+            <td><span onclick="vis('fzines')" class="file"><img src="ico/fopn.png" class="ico"></span></td>
+            <td><span onclick="vis('updates')" class="file"><img src="ico/text.png" class="ico"></span></td>
+            <td><span onclick="vis('pronouns')" class="file"><img src="ico/text.png" class="ico"></span></td>
+            <td><span onclick="vis('twiary')" class="file"><img src="ico/help.png" class="ico"></span></td>
+            
+          </tr>
+          <tr>
+            <th><span onclick="vis('fzines')" class="file">Buy Now</span></th>
+            <th><span onclick="vis('updates')" class="file">CA</span></th>
+            <th><span onclick="vis('pronouns')" class="file">Tokenomics</span></th>
+            <th><span onclick="vis('twiary')" class="file">How to Buy</span></th>
+            
+          </tr>
+         
+    
+          <tr>
+        
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    <div class="box" id="about">
+      <div class="top" id="abouth">
+        <div class="toptxt">About $Rover - Notepad</div>
+        <div class="ex" onclick="vis('about')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+        $Rover, If you open the file browser on Windows XP, you might find a small yellow dog on your screen. His name is Rover, and you can put it anywhere you want!
+      </div>
+    </div>
+    
+    <div class="box closed" id="bitsy">
+      <div class="top" id="bitsyh">  
+        <div class="toptxt">BitsyBrowse</div>
+        <div class="ex" onclick="vis('bitsy')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+        <span style="font-size: 12px;">note: if you see <img src="warning.gif" class="warn" title="warning symbol!" alt="warning symbol!">, hover over it to check for content warnings for that bitsy</span>
+        <ul>
+          <li><span class="fakeA" id="award" onclick="opnBit(this.id, 'award')">award</span>: the only bitsy award that should exist - 1 room</li>
+          <li><span class="fakeA" id="the_flower_forest" onclick="opnBit(this.id, 'the flower forest')">the flower forest</span>: pick some flowers for your friend - 4 rooms</li>
+          <li><span class="fakeA" id="summoned" onclick="opnBit(this.id, 'summoned')">summoned</span> <img src="warning.gif" class="warn" title="warning for animal death, regular death" alt="warning for animal death, regular death">: didn't expect to find anyone down here... - 2 rooms</li>
+          <li><span class="fakeA" id="hotel_n" onclick="opnBit(this.id, 'hotel &#8469;')">hotel &#8469;</span>: gotta get to your hotel room for the night - 1 room(!)</li>
+          <li><span class="fakeA" id="cat_noir" onclick="opnBit(this.id, 'cat noir')">cat noir</span>: made for a secret-santa type bitsy jam. you're a catboy spy, and must pick an outfit to go to a party undercover in - 2 rooms</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="box closed" id="butn">
+      <div class="top flashy" id="butnh">
+        <div class="toptxt "><div class="marquee">ADVERTISEMENT - Win FREE Access To ALL These GREAT Websites!! Click Here!</div></div>
+        <div class="ex" onclick="vis('butn')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+        <a href="https://t.me/" target="_blank" title="$Rover Community Link" rel="me">Telegram</a><br>
+        <a href="https://x.com/" target="_blank" title="Twitter Community Link" rel="me">Twitter</a><br>
+        <a href="https://the-microsoft-windows-xp.fandom.com/wiki/Rover#:~:text=Rover's%20first%20appearance%20is%20in,made%20him%20the%20default%20assistant." target="_blank" title="How would you know if you don't click it?">Understand it</a><br>
+        <a href="https://www.dextools.io/" target="_blank" title="Dextool will be updated soon..."><strike>Dextools</strike></a><br>
+        <a href="https://pump.fun/soon" target="_blank" title="Coming soon in pump">contract</a><br><br>
+        <!-- buttons -->
+        <a href="" target="_blank"><img src="butt/nf.gif" title="I'm back again, and about time too" alt="I'm back again, and about time too"></a><a href="https://neocities.org" target="_blank"><img src="butt/nc.png" title="hosted by Neocities!" alt="hosted by Neocities!"></a>
+        <a href="" target="_blank"><img src="butt/gb.gif" title="sign my guestbook from 2014, lol" alt="sign my guestbook from 2014, lol"></a><img src="butt/wb.png" title="new laptop, still don't like windows" alt="new laptop, still don't like windows">
+        <img src="butt/dm.gif" title="You were diagnosed with GAY" alt="You were diagnosed with GAY"><img src="butt/sn.gif" title="apocalypse posadist accelerationism to reach inkopolis in 10 years" alt="apocalypse posadist accelerationism to reach inkopolis in 10 years"><br>
+        <div style="width: 185px; height: 60px" align="center">
+          <a href=""><img src="LTW.bmp" style="width:125px;"></a>
+          <table style="padding:0; margin:0;font-size:10px;position: relative; top:-60px; font-weight: bold; ">
+            <tr align="center">
+              <td style="width:50px;"><a href="">&lt;&lt;<br>Pepe<br>Doge</a></td>
+              <td style="width: 50px;"><a href="" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+              <td style="width:50px;"><a href="">&gt;&gt;<br>Shiba<br>Floki Inu</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <div class="box closed" id="gamer">
+      <div class="top" id="gamerh">
+        <div class="toptxt" id="gmrhd">BitsyBrowse</div>
+        <div class="popper" onmouseenter="popout('gamer')" aria-hidden="true">&#8599;</div>
+        <div class="ex" onclick="vis('gamer')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content hasFrame" id="bxgmr">
+        <iframe id="gameFrame"></iframe>
+      </div>
+    </div>
+    
+    
+    
+    <div class="box closed" id="twiary">
+      <div class="top" id="twiaryh">
+        <div class="toptxt">How to Buy - File Explorer</div>
+        <div class="ex" onclick="vis('twiary')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content" id="fT">
+     
+     > Create a wallet<br>
+>> <span class="fakeA" id="190207" onclick="opnTwi(this.id)">Download <a href="https://phantom.app/" target="_blank">Phantom</a> or your
+        wallet of choice from the app
+        store or Google Play Store
+        for free. Desktop users,
+        download the <a href="https://chrome.google.com/webstore/detail/phantom" target="_blank">Google Chrome</a>
+        extension by going to the <a href="https://phantom.app/" target="_blank">Phantom</a> app. </span><br>
+
+      > Get some SOL<br>
+      >> <span class="fakeA" id="190306" onclick="opnTwi(this.id)">Have SOL in your wallet to
+        switch to $Rover. If you don't
+        ​have any SOL, you can buy SOL
+        from an exchange or cross
+        chain ​swap and send it to your
+        wallet.</span><br>
+
+      > Go to Phantom<br>
+      >> <span class="fakeA" id="190306" onclick="opnTwi(this.id)">Go
+        raydium.io in google chrome
+        or on the ​browser inside
+        your phantom. Connect
+        your wallet. Paste ​the
+        $Rover token address into
+        phantom and confirm the
+        swap.</span><br>
+
+      > Swap for $Rover<br>
+      >> <span class="fakeA" id="190911" onclick="opnTwi(this.id)">Switch SOL for $Rover.
+
+        You are now a $Rover
+        holder!</span><br>
+
+      </div>
+    </div>
+    
+    <div class="box closed" id="twiney">
+      <div class="top" id="twineyh">
+        <div class="toptxt" id="twihd">How to Buy</div>
+        <div class="popper" onmouseenter="popout('twiney')" aria-hidden="true">&#8599;</div>
+        <div class="ex" onclick="vis('twiney')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content hasFrame" id="bxtwi">
+        <iframe id="twiFrame"></iframe>
+      </div>
+    </div>
+    
+    <div class="box closed" id="fzines">
+      <div class="top" id="fzinesh">
+        <div class="toptxt">Buy Now - File Explorer</div>
+        <div class="ex" onclick="vis('fzines')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+        <table class="folder">
+          <tr>
+            <td><a href="https://pump.fun/soon" target="_blank"><span onclick="" class="file"><img src="ico/webw.png" class="ico"></span></a></td>
+          </tr>
+          <tr>
+            <th><a href="https://pump.fun/soon" target="_blank"><span onclick="" class="file">Pumpfun</span></a></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    <div class="box closed" id="aqua">
+      <div class="top" id="aquah">
+        <div class="toptxt">AquariumFREE.exe</div>
+        <div class="popper" onmouseenter="popout('aqua')" aria-hidden="true">&#8599;</div>
+        <div class="ex" onclick="vis('aqua')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content hasFrame" id="bxgmr">
+        <iframe id="aquaFrame"></iframe>
+      </div>
+    </div>
+    
+    <div class="box text" id="updates">
+      <div class="top" id="updatesh">
+        <div class="toptxt">Contract Address - Notepad</div>
+        <div class="popper" onmouseenter="popout('updates')" aria-hidden="true">&#8599;</div>
+        <div class="ex" onclick="vis('updates')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+        <div id="updFill" class="bulleted">
+          soon
+          <!-- <p class="bullet"></p> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="box text closed" id="pronouns">
+      <div class="top" id="pronounsh">
+        <div class="toptxt">Tokenomics - Notepad</div>
+        <div class="popper" onmouseenter="popout('pronouns')" aria-hidden="true">&#8599;</div>
+        <div class="ex" onclick="vis('pronouns')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+        <div id="proFill"></div>
+          Symbol > $Rover<br>
+          Chain > SOL<br>
+          <br>
+          Buy tax > 0% <br>
+          Sell tax > 0% <br>
+          <br>
+          Total supply > 1,000,000,000
+        </div>
+      </div>
+    
+    
+    <!-- 
+    box template
+    
+    <div class="box" id="_">
+      <div class="top" id="_h">
+        <div class="toptxt"></div>
+        if contain iframe: <div class="popper" onmouseenter="popout('_')" aria-hidden="true">&#8599;</div>
+        <div class="ex" onclick="vis('_')" aria-hidden="true">&#x2715;</div>
+      </div>
+      <div class="content">
+      </div>
+    </div>
+    
+    -->
+    <!-- yeah this looks ugly as sin putting this here. but otherwise the script runs before the divs exist -->
+    <script>
+      window.onload = function() {
+        checkVis();
+        checkPos();
+        if (!localStorage.getItem("about")) setDefaultLocal();
+      }
+      var boxes = document.getElementsByClassName("box");
+      for (i in boxes) dragElement(boxes[i]);
+    </script>
+  </body>
+</html>

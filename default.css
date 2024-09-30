@@ -1,0 +1,291 @@
+body {
+  background-image: url("bg.gif");
+  background-repeat: repeat;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+}
+      
+div {
+  float: left;
+}
+.box {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: #C1C1C1;
+  display: initial;
+  z-index: 4;
+}
+.closed {
+  display: none;
+}
+#main {
+  top: var(--main-y, 500px);
+  left: var(--main-x, 400px);
+  text-align: center;
+}
+#bitsy {
+  top: var(--bitsy-y, 250px);
+  left: var(--bitsy-x, 750px);
+}
+#about {
+  top: var(--about-y, 100px);
+  left: var(--about-x, 150px);
+}
+#butn {
+  width: 200px;
+  top: var(--butn-y, 325px);
+  left: var(--butn-x, 600px);
+}
+#gamer {
+  width: 516px;
+  height: 541px;
+  top: var(--gamer-y, 700px);
+  left: var(--gamer-x, 450px);
+}
+#splat {
+  top: var(--splat-y, 675px);
+  left: var(--splat-x, 200px);
+  padding: 0;
+}
+#twiary {
+  width: 400px;
+  top: var(--twiary-y, 50px);
+  left: var(--twiary-x, 300px);
+}
+#twiney {
+  width: 500px;
+  top: var(--twiney-y, 300px);
+  left: var(--twiney-x, 475px);
+}
+#fzines {
+  top: var(--fzines-y, 550px);
+  left: var(--fzines-x, 450px);
+}
+#aqua {
+  width: 516px;
+  height: 541px;
+  top: var(--aqua-y, 400px);
+  left: var(--aqua-x, 750px);
+}
+#updates {
+  top: var(--updates-y, 150px);
+  left: var(--updates-x, 650px);
+}
+#pronouns {
+  top: var(--pronouns-y, 200px);
+  left: var(--pronouns-x, 250px);
+}
+.top {
+  width: 100%;
+  height: 25px;
+  background-color: #ff9900;
+  position: static;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-bottom: 0px;
+  cursor: move;
+}
+.flashy {
+  animation: background 2s cubic-bezier(1,0,0,1) infinite;  
+}
+@keyframes background {
+  0% { background-color: #ff9900; }
+  50% { background-color: #FF8800; } 
+}
+.toptxt {
+  width: 90%;
+  padding-top: 4px;
+  padding-left: 4px;
+  text-align: left;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.marquee {
+  height: 25px;
+  width: max-content;
+  animation: scroll-left 10s steps(150) infinite;
+}
+
+@keyframes scroll-left {
+  0% {transform: translateX(30%)}
+  100% {transform: translateX(-100%)} 
+}
+
+.popper {
+  position: absolute;
+  top: 4px;
+  left: calc(100% - 50px);
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  font-size: 14px;
+  text-align: center;
+  background-color: #FFFF00;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.ex {
+  position: absolute;
+  top: 4px;
+  left: calc(100% - 25px);
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  font-size: 14px;
+  text-align: center;
+  background-color: #FF0000;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.content {
+  width: 100%;
+  padding: 6px;
+  position: static;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+}
+.hasFrame {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#bxgmr {
+  height: 516px;
+}
+#bxspl {
+  height: 354px;
+}
+#bxtwi {
+  height: 304px;
+}
+
+#gameFrame {
+  width: 512px;
+  height: 512px;
+  border: 0;
+}
+#splFrame {
+  width: 395px;
+  height: 350px;
+  border: 0;
+}
+#twiFrame {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+#aquaFrame {
+  width: 512px;
+  height: 512px;
+  border: 0;
+}
+
+#dskcnt {
+  position: absolute;
+  left: 16px;
+  top: 32px;
+  height: auto;
+  width: 64px;
+  z-index: 2;
+}
+.dsktp {
+  position: static;
+  height: 64px;
+  width: 64px;
+  margin-bottom: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.menu {
+  color: #C1C1C1;
+  font-weight: bold;
+}
+
+.bulleted {
+  text-indent: -5%;
+  width: 95%;
+  margin-left: 5%;
+  border: none;
+}
+.bullet {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+table {
+  text-align: center;
+  
+}
+td {
+  width: 72px;
+}
+th {
+  width: 72px;
+}
+.file {
+  cursor: pointer;
+}
+
+#urhc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 15px;
+  z-index: 6969;
+}
+#nwlogo {
+  position: absolute;
+  bottom: 70px;
+  right: 70px;
+  width: 550px;
+  z-index: 1;
+}
+
+#clipPy {
+  position: absolute;
+  left: 10px;
+  bottom: 25px;
+  width: 120px;
+  z-index: 12;
+}
+#clipBubble {
+  position: absolute;
+  transform: rotate(90deg);
+  left: 175px;
+  bottom: -30px;
+  z-index: 12;
+}
+#clipText {
+  position: absolute;
+  left: 150px;
+  bottom: 25px;
+  height: 120px;
+  width: 200px;
+  z-index: 13;
+}
+.clipButts {
+  cursor: pointer;
+}
+
+.fakeA {
+  color: #2000EC;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.fakeA :focus {
+  color: #6C00A2;
+}
+.warn {
+  width: 16px;
+  height: 16px;
+}

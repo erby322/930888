@@ -191,7 +191,7 @@ img.onmousedown = function(event) {
         
         // 检查是否放置在目标图片上
         if (isOverlapping(img, target)) {
-            window.open('http://pump.fun', '_blank'); // 在新标签页中打开链接
+            window.open('https://x.com/i/communities/1840738355648270507', '_blank'); // 在新标签页中打开链接
         }
     };
 };
